@@ -1,3 +1,8 @@
+package CoffeeShop.Model;
+
+import java.util.List;
+
 public interface Customizable {
-    void customize();
+    List<String> getCustomizations();
+    void customize(int[] customizations);
 }
