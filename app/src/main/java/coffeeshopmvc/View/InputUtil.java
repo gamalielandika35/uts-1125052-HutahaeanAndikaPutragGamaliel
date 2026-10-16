@@ -1,4 +1,4 @@
-package CoffeeShop.View;
+package coffeeshopmvc.View;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package CoffeeShop.View;
+package coffeeshopmvc.View;
 
 public class CoffeeShopView {
     

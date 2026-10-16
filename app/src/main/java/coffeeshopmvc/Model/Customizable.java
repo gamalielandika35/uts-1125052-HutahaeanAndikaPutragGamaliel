@@ -1,4 +1,4 @@
-package CoffeeShop.Model;
+package coffeeshopmvc.Model;
 
 import java.util.List;
 
