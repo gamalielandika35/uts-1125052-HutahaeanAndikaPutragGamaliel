@@ -15,4 +15,3 @@ public enum EnumUkuran {
         return pengaliHarga;
     }
 }
-

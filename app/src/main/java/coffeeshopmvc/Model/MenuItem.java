@@ -9,9 +9,7 @@ public abstract class MenuItem implements Customizable {
     private final String nama;
     private final double hargaBase;
     private int stok;
-    private final EnumKategori kategori;
-
-    public MenuItem(String id, String nama, double hargaBase, int stok, EnumKategori kategori) {
+    public MenuItem(String id, String nama, double hargaBase, int stok) {
         if (id == null || id.isBlank()) {
             throw new InputTidakValidException("ID menu tidak boleh kosong.");
         }
@@ -28,7 +26,6 @@ public abstract class MenuItem implements Customizable {
         this.nama = nama;
         this.hargaBase = hargaBase;
         this.stok = stok;
-        this.kategori = kategori;
     }
 
     public String getId() {
@@ -47,8 +44,8 @@ public abstract class MenuItem implements Customizable {
         return stok;
     }
 
-    public EnumKategori getKategori() {
-        return kategori;
+    public boolean bisaPilihUkuran() {
+        return false;
     }
 
     public void validasiJumlahPesanan(int jumlah) {
@@ -121,6 +118,3 @@ public abstract class MenuItem implements Customizable {
     public abstract String getOrderDetail();
     public abstract List<String> getCustomizationPrompts();
 }
-
-
-

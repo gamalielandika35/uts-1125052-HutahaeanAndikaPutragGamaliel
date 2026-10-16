@@ -5,4 +5,3 @@ public class StokTIdakCukupException extends RuntimeException {
         super(message);
     }
 }
-
