@@ -2,7 +2,7 @@ package coffeeshopmvc.Model;
 
 import java.util.List;
 
-public class Kopi extends MenuItem {
+public class Kopi extends MenuItem implements Customizable {
     private int rum;
     private int es;
     private int gula;

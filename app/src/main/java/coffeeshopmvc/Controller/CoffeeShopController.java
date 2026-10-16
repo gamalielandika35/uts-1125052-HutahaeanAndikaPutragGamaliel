@@ -104,7 +104,7 @@ public class CoffeeShopController {
                 return jumlah;
             } catch (NumberFormatException e) {
                 view.tampilkanPesan("Jumlah harus berupa angka.");
-            } catch (InputTidakValidException | StokTidakCukupException e) {
+            } catch (InputTidakValidException | StokTIdakCukupException e) {
                 view.tampilkanPesan(e.getMessage() + " Silakan masukkan jumlah lagi.");
             }
         }
@@ -162,7 +162,7 @@ public class CoffeeShopController {
                 }
             } catch (IllegalArgumentException e) {
                 view.tampilkanPesan("Ukuran tidak valid. Pilih SMALL, MEDIUM, atau LARGE.");
-            } catch (InputTidakValidException | StokTidakCukupException e) {
+            } catch (InputTidakValidException | StokTIdakCukupException e) {
                 view.tampilkanPesan(e.getMessage());
                 return -1;
             }

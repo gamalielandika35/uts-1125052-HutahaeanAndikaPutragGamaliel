@@ -1,8 +1,8 @@
-package coffeeshopmvc.model;
+package coffeeshopmvc.Model;
 
 import java.util.List;
 
-public class Teh extends MenuItem {
+public class Teh extends MenuItem implements Customizable {
     private int boba;
     private int es;
     private int gula;
@@ -12,17 +12,16 @@ public class Teh extends MenuItem {
         super(id, nama, hargaBase, stok);
     }
 
-    @Override
+  
     public boolean bisaPilihUkuran() {
         return true;
     }
 
-    @Override
+
     public void customize(List<Integer> customizations) {
         customize(konversiCustomisasi(customizations, 4));
     }
 
-    @Override
     public void customize(int[] customizations) {
         int[] values = validasiPanjangArray(customizations, 4);
         boba = validasiRentang(values[0], 0, 3, "Boba");
@@ -31,18 +30,17 @@ public class Teh extends MenuItem {
         karamel = validasiRentang(values[3], 0, 5, "Karamel");
     }
 
-    @Override
     public double hitungHargaTotal() {
         return getHargaBase() + (boba * 1000) + (karamel * 3000);
     }
 
-    @Override
+  
     public String getOrderDetail() {
         return getNama() + " | Boba: " + boba + ", Es: " + es + ", Gula: " + gula
                 + ", Karamel: " + karamel;
     }
 
-    @Override
+   
     public List<String> getCustomizationPrompts() {
         return List.of("Boba (0-3)", "Es (0-5)", "Gula (0-5)", "Karamel (0-5)");
     }

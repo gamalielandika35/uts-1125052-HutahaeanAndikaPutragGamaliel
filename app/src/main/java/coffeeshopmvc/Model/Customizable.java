@@ -3,6 +3,6 @@ package coffeeshopmvc.Model;
 import java.util.List;
 
 public interface Customizable {
-    List<String> getCustomizations();
+    void customize(List<Integer> customizations);
     void customize(int[] customizations);
 }
