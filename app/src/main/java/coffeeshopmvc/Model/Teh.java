@@ -2,7 +2,7 @@ package coffeeshopmvc.Model;
 
 import java.util.List;
 
-public class Teh extends MenuItem implements Customizable {
+public class Teh extends MenuItem {
     private int boba;
     private int es;
     private int gula;
